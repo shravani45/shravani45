@@ -6,7 +6,6 @@ import {
   FaChartLine,
   FaBrain,
   FaCode,
-  FaGitAlt,
   FaFileAlt,
   FaCogs
 } from 'react-icons/fa';
