@@ -9,7 +9,7 @@ import {
   FaFileAlt,
   FaCogs
 } from 'react-icons/fa';
-import { SiJupyter, SiPowerbi, SiMongodb, SiOracle } from 'react-icons/si';
+import { SiPowerbi, SiMongodb, SiOracle } from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {
