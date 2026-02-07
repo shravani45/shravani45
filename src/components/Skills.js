@@ -15,41 +15,48 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Programming Languages',
+      title: 'Programming & Core CS',
       skills: [
         { name: 'Python', icon: FaPython, level: 90 },
         { name: 'C++', icon: FaCode, level: 80 },
+        { name: 'CUDA', icon: FaCode, level: 75 },
         { name: 'Object-Oriented Programming', icon: FaCogs, level: 85 },
-        { name: 'Parallel Programming', icon: FaCogs, level: 75 }
+        { name: 'Data Structures & Algorithms (foundational)', icon: FaCogs, level: 80 }
       ]
     },
     {
-      title: 'Data Science & ML',
+      title: 'Data Science & Analytics',
+      skills: [
+        { name: 'Exploratory Data Analysis (EDA)', icon: FaChartLine, level: 90 },
+        { name: 'Statistical Analysis', icon: FaChartLine, level: 85 },
+        { name: 'Data Visualization', icon: FaChartLine, level: 88 },
+        { name: 'Big Data Analytics', icon: FaChartLine, level: 80 }
+      ]
+    },
+    {
+      title: 'Machine Learning, DL & AI',
       skills: [
         { name: 'Machine Learning', icon: FaBrain, level: 85 },
         { name: 'Deep Learning', icon: FaBrain, level: 80 },
-        { name: 'Data Analysis', icon: FaChartLine, level: 90 },
-        { name: 'Statistical Analysis', icon: FaChartLine, level: 85 },
-        { name: 'Data Visualization', icon: FaChartLine, level: 88 }
+        { name: 'Computer Vision', icon: FaBrain, level: 75 },
+        { name: 'Natural Language Processing (NLP)', icon: FaBrain, level: 80 }
       ]
     },
     {
-      title: 'Tools & Platforms',
-      skills: [
-        { name: 'PowerBI', icon: SiPowerbi, level: 85 },
-        { name: 'Jupyter Notebook', icon: SiJupyter, level: 90 },
-        { name: 'Microsoft Office', icon: FaFileAlt, level: 88 },
-        { name: 'Google Keyword Planner', icon: FaChartLine, level: 75 }
-      ]
-    },
-    {
-      title: 'Databases & SAP',
+      title: 'Databases & Data Tools',
       skills: [
         { name: 'Oracle SQL', icon: SiOracle, level: 80 },
         { name: 'MongoDB', icon: SiMongodb, level: 75 },
+        { name: 'Power BI', icon: SiPowerbi, level: 85 }
+      ]
+    },
+    {
+      title: 'Enterprise & Business Tools',
+      skills: [
         { name: 'SAP FI/CO', icon: FaDatabase, level: 85 },
-        { name: 'SAP Project System', icon: FaDatabase, level: 80 },
-        { name: 'SAP Enable Now', icon: FaCogs, level: 75 }
+        { name: 'SAP Project System (PS)', icon: FaDatabase, level: 80 },
+        { name: 'SAP Enable Now', icon: FaCogs, level: 75 },
+        { name: 'Microsoft 365', icon: FaFileAlt, level: 88 }
       ]
     }
   ];
@@ -97,16 +104,6 @@ const Skills = () => {
                         <skill.icon />
                       </div>
                       <span className="skill-name">{skill.name}</span>
-                      <span className="skill-level">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <motion.div
-                        className="skill-progress"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: skillIndex * 0.1 + 0.5 }}
-                        viewport={{ once: true }}
-                      />
                     </div>
                   </motion.div>
                 ))}
@@ -126,20 +123,28 @@ const Skills = () => {
             <h3>What I Bring to the Table</h3>
             <div className="summary-points">
               <div className="summary-point">
-                <div className="point-icon">📊</div>
-                <p>Advanced data analysis and statistical modeling techniques</p>
+                <div className="point-icon">🧠</div>
+                <p>Analytical thinking & problem decomposition — breaking complex problems into structured, solvable components.</p>
               </div>
               <div className="summary-point">
-                <div className="point-icon">🤖</div>
-                <p>Machine learning model development and optimization</p>
+                <div className="point-icon">🤝</div>
+                <p>Cross-functional collaboration — working effectively with technical and non-technical stakeholders in academic and industry settings.</p>
               </div>
               <div className="summary-point">
-                <div className="point-icon">📈</div>
-                <p>Interactive dashboards and data visualization</p>
+                <div className="point-icon">📢</div>
+                <p>Clear communication of insights — translating technical findings into meaningful narratives for decision-making.</p>
               </div>
               <div className="summary-point">
-                <div className="point-icon">💼</div>
-                <p>Business process improvement through data insights</p>
+                <div className="point-icon">⚙️</div>
+                <p>Ownership & adaptability — quickly learning new tools, domains, and workflows to deliver results in dynamic environments.</p>
+              </div>
+              <div className="summary-point">
+                <div className="point-icon">👥</div>
+                <p>Stakeholder management — effectively engaging with diverse stakeholders to align technical solutions with business objectives and ensure successful project delivery.</p>
+              </div>
+              <div className="summary-point">
+                <div className="point-icon">⚡</div>
+                <p>Learning in fast-paced environments — thriving in dynamic settings by rapidly acquiring new skills, adapting to changing requirements, and maintaining high performance under pressure.</p>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -58,8 +58,7 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: FaLinkedin, href: 'https://linkedin.com/in/shravani-anand', label: 'LinkedIn' },
-    { icon: FaGithub, href: 'https://github.com/shravani', label: 'GitHub' },
-    { icon: FaTwitter, href: 'https://twitter.com/shravani', label: 'Twitter' }
+    { icon: FaGithub, href: 'https://github.com/shravani', label: 'GitHub' }
   ];
 
   return (

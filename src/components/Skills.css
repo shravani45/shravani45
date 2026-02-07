@@ -23,10 +23,11 @@
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 4rem;
+  justify-content: center;
 }
 
 .skill-category {
@@ -36,6 +37,9 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid #f0f0f0;
   transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
 }
 
 .skill-category:hover {
@@ -74,8 +78,7 @@
 .skill-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .skill-icon {
@@ -164,7 +167,7 @@
 
 .summary-points {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 

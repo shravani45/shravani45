@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHeart, FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaHeart, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -9,7 +9,6 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/shravani', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://linkedin.com/in/shravani-anand', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com/shravani', label: 'Twitter' },
     { icon: FaEnvelope, href: 'mailto:shravanianand2004@gmail.com', label: 'Email' }
   ];
 
@@ -19,6 +18,7 @@ const Footer = () => {
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Recommendations', href: '#recommendations' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -41,10 +41,6 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h3 className="footer-title">Shravani</h3>
-            <p className="footer-description">
-              Full Stack Developer passionate about creating beautiful, 
-              functional, and user-centered digital experiences.
-            </p>
             <div className="social-links">
               {socialLinks.map((social, index) => (
                 <motion.a

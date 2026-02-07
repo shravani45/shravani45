@@ -8,47 +8,49 @@ const Experience = () => {
     {
       title: 'Associate Business Process Analyst Intern',
       company: 'SLB',
+      companyUrl: 'https://www.slb.com/',
       location: 'Coimbatore, India',
       period: 'Jun 2025 – Jan 2026',
-      type: 'Internship (Ongoing)',
-      description: 'Supporting new SAP releases in the Record-to-Report (Finance) domain with hands-on experience in SAP FI/CO and Project System (PS) modules.',
+      type: '',
+      description: 'Supporting new SAP releases in the Record-to-Report (Finance) domain, with hands-on exposure to SAP FI/CO and SAP Project System (PS) in global enterprise workflows.',
       achievements: [
-        'Collaborated with cross-functional teams and managed global stakeholders to deliver requirements',
-        'Led User Engagement Project within the Change Management team, creating SAP Enable Now training',
-        'Drove continuous improvement project, automating knowledge article creation with 85% efficiency improvement',
-        'Focused on Project Accounting processes and Intercompany Accounts Receivable/Payable'
+        'Collaborated with cross-functional teams and global stakeholders to gather, manage, and deliver business requirements.',
+        'Led a User Engagement initiative within the Change Management team by creating structured training content using SAP Enable Now.',
+        'Drove a continuous improvement project by automating ServiceNow knowledge article creation, resulting in an ~85% efficiency improvement.',
+        'Worked closely on Project Accounting and Intercompany AR/AP processes, gaining end-to-end finance domain exposure.'
       ],
-      technologies: ['SAP FI/CO', 'SAP Project System', 'SAP Enable Now', 'ServiceNow', 'Change Management']
+      technologies: ['SAP FI/CO', 'SAP Project System', 'SAP Enable Now', 'ServiceNow', 'Change Management', 'Planisware', 'Python', 'Flask']
     },
     {
       title: 'Digital Analytics Intern',
       company: 'Mamsys.com',
+      companyUrl: 'https://mamsys.com/',
       location: 'Noida, India',
       period: 'Jun 2024 – Jul 2024',
       type: 'Internship',
-      description: 'Conducted search behavior analysis and developed keyword strategy to improve visibility among CXOs and VPs.',
+      description: 'Worked on search behavior and content performance analysis to improve digital visibility among CXOs and senior leadership audiences.',
       achievements: [
-        'Built interactive Power BI dashboards to track KPIs and present insights',
-        'Analyzed content performance and search trends for strategic decision making',
-        'Developed comprehensive keyword strategy for target audience engagement',
-        'Created data-driven reports for content optimization'
+        'Built interactive Power BI dashboards to track KPIs and communicate insights to stakeholders.',
+        'Analyzed search trends and content performance to support strategic decision-making.',
+        'Designed a data-driven keyword strategy to improve targeted audience engagement.',
+        'Created analytical reports to guide content optimization and campaign planning.'
       ],
-      technologies: ['PowerBI', 'Data Analysis', 'Google Keyword Planner', 'KPI Tracking', 'Content Analytics']
+      technologies: ['Power BI', 'Data Analysis', 'Google Keyword Planner', 'KPI Tracking', 'Content Analytics']
     },
     {
       title: 'Data Science Intern',
       company: 'EaseMyTrip.com',
+      companyUrl: 'https://www.easemytrip.com/',
       location: 'Noida, India',
-      period: 'Dec 2023 – Dec 2023',
+      period: 'Dec 2023',
       type: 'Internship',
-      description: 'Built machine learning models to predict train ticket status and performed exploratory data analysis for operational insights.',
+      description: 'Built and evaluated machine learning models while performing exploratory data analysis on large-scale booking data to support operational decisions.',
       achievements: [
-        'Built ML model to predict train ticket status, boosting accuracy by 12%',
-        'Performed feature selection and preprocessing for model optimization',
-        'Conducted exploratory data analysis to uncover booking trends',
-        'Provided actionable insights for operational decision making'
+        'Developed an ML-based train ticket status prediction model, improving accuracy by ~12% through feature engineering.',
+        'Performed data preprocessing, feature selection, and EDA to identify booking patterns and trends.',
+        'Translated analytical findings into actionable operational insights for business teams.'
       ],
-      technologies: ['Machine Learning', 'Python', 'Data Analysis', 'Feature Engineering', 'Predictive Modeling']
+      technologies: ['Python', 'Machine Learning', 'Data Analysis', 'Feature Engineering', 'Predictive Modeling']
     }
   ];
 
@@ -59,7 +61,7 @@ const Experience = () => {
       location: 'Manipal, India',
       period: 'Sept 2022 – July 2026',
       description: 'Currently pursuing with a CGPA of 8.14. Focused on data science, machine learning, and engineering principles.',
-      relevantCourses: ['Machine Learning', 'Data Analysis', 'Statistical Analysis', 'Database Systems', 'Programming']
+      relevantCourses: ['Machine Learning', 'Data Analysis', 'Statistical Analysis', 'Database Systems', 'Programming', 'Big Data Analytics and AI', 'Object Oriented Programming']
     },
     {
       degree: 'Intermediate (12th Grade)',
@@ -67,7 +69,7 @@ const Experience = () => {
       location: 'Mayur Vihar, Delhi, India',
       period: 'March 2021 – March 2022',
       description: 'Completed with 95% score. Strong foundation in mathematics and science.',
-      relevantCourses: ['Mathematics', 'Physics', 'Chemistry', 'English', 'Computer Science']
+      relevantCourses: ['Mathematics', 'Physics', 'Chemistry', 'English']
     }
   ];
 
@@ -114,18 +116,25 @@ const Experience = () => {
                     <div className="experience-header">
                       <h4 className="experience-title">{exp.title}</h4>
                       <div className="experience-meta">
-                        <span className="company">{exp.company}</span>
+                        <a 
+                          href={exp.companyUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="company-link"
+                        >
+                          <span className="company">{exp.company}</span>
+                        </a>
                         <span className="period">{exp.period}</span>
+                        {exp.type && exp.type !== '' && <span className="experience-type">| {exp.type}</span>}
                       </div>
                       <div className="experience-location">
                         <FaMapMarkerAlt className="location-icon" />
                         <span>{exp.location}</span>
-                        <span className="experience-type">{exp.type}</span>
                       </div>
                     </div>
                     <p className="experience-description">{exp.description}</p>
                     <div className="achievements">
-                      <h5>Achievements:</h5>
+                      <h5>Key Contributions & Impact:</h5>
                       <ul>
                         {exp.achievements.map((achievement, idx) => (
                           <li key={idx}>{achievement}</li>
@@ -133,6 +142,7 @@ const Experience = () => {
                       </ul>
                     </div>
                     <div className="technologies">
+                      <span className="tech-label">Tools & Skills:</span>
                       {exp.technologies.map((tech, idx) => (
                         <span key={idx} className="tech-tag">{tech}</span>
                       ))}

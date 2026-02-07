@@ -1,13 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/shravani', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://linkedin.com/in/shravani-anand', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com/shravani', label: 'Twitter' },
     { icon: FaEnvelope, href: 'mailto:shravanianand2004@gmail.com', label: 'Email' }
   ];
 
@@ -27,30 +26,16 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Hi, I'm <span className="highlight">Shravani Anand</span>
+              Hi, I'm <span className="highlight">Shravani Anand</span>!
             </motion.h1>
-            
-            <motion.h2
-              className="hero-subtitle"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Data Science Student
-            </motion.h2>
             
             <motion.p
               className="hero-description"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
-              I'm a Data Science student passionate about transforming data into actionable insights 
-              through predictive modeling, analytics, and process optimization. With experience across 
-              data science, business process analytics, and digital strategy, I enjoy bridging the gap 
-              between data and business impact. Currently pursuing a B.Tech in Data Science and Engineering 
-              at Manipal Institute of Technology and interning at SLB (Schlumberger) as an 
-              Associate Business Process Analyst Intern.
+              A Data Science & Engineering student who loves turning data into insights and ideas into intelligent solutions. From building ML models to exploring AI, NLP, and analytics, I enjoy solving real-world problems with code, curiosity, and creativity. Always learning, always building 🚀
             </motion.p>
             
             <motion.div
@@ -101,9 +86,11 @@ const Hero = () => {
           >
             <div className="image-container">
               <div className="profile-image">
-                <div className="image-placeholder">
-                  <span>SA</span>
-                </div>
+                <img 
+                  src={`${process.env.PUBLIC_URL}/images/profile.png`}
+                  alt="Shravani Anand" 
+                  className="profile-photo"
+                />
               </div>
               <div className="floating-elements">
                 <div className="floating-element element-1"></div>
