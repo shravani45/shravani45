@@ -58,7 +58,7 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: FaLinkedin, href: 'https://linkedin.com/in/shravani-anand', label: 'LinkedIn' },
-    { icon: FaGithub, href: 'https://github.com/shravani', label: 'GitHub' }
+    { icon: FaGithub, href: 'https://github.com/shravani45', label: 'GitHub' }
   ];
 
   return (
